@@ -1,0 +1,82 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="300px" height="400px">
+</canvas>
+<script language="javascript" >
+var mycanvas= document.getElementById("myCanvas");
+var ctx=mycanvas.getContext("2d");
+
+ctx.fillStyle="azure";
+ctx.fillRect(0,0,mycanvas.width,mycanvas.height);
+
+drawCircle(ctx,"#FFDCB2",mycanvas.width/2,mycanvas.height/2,mycanvas.width/4,0);
+
+drawCircle(ctx,"black",mycanvas.width/4,mycanvas.height/4+mycanvas.height/20,mycanvas.width/8,0);
+drawCircle(ctx,"black",mycanvas.width*3/4,mycanvas.height/4+mycanvas.height/20,mycanvas.width/8,0);
+drawOval(ctx,"white",mycanvas.width/2-mycanvas.width/16,mycanvas.height/2-mycanvas.height/5,mycanvas.width/24,0,1,1.5);
+drawOval(ctx,"white",mycanvas.width/2+mycanvas.width/16,mycanvas.height/2-mycanvas.height/5,mycanvas.width/24,0,1);
+drawOval(ctx,"black",mycanvas.width/2-mycanvas.width/19,mycanvas.height/2-mycanvas.height/4.75,mycanvas.width/64,0,1,1.1);
+drawOval(ctx,"black",mycanvas.width/2+mycanvas.width/19,mycanvas.height/2-mycanvas.height/4.75,mycanvas.width/64,0,1);
+drawOval(ctx,"black",mycanvas.width/4+mycanvas.width/32,mycanvas.height/4+mycanvas.height/3.4,mycanvas.width/20,0,1.8,0.6);
+drawOval(ctx,"white",mycanvas.width/7,mycanvas.height/4+mycanvas.height/3.6,mycanvas.width/102,0,2,1);
+drawShape(ctx,"black",mycanvas.width/12,mycanvas.height/1.8,mycanvas.width/5.2,mycanvas.height/1.5);
+drawShape2(ctx,"black",mycanvas.width/9.75,mycanvas.height/1.7,mycanvas.width/5.82 ,mycanvas.height/1.38);
+function drawShape2(ctx, fillStyle,x1,y1,x2,y2) {   
+
+  ctx.strokeStyle = fillStyle;
+  ctx.globalAlpha = 1.0;
+  ctx.beginPath();
+ ctx.moveTo(x1,y1);
+
+
+ctx.quadraticCurveTo(x1+x2/5,y2,x2,y1);
+      ctx.lineWidth = 0.9;
+ctx.stroke();
+
+}
+function drawShape(ctx, fillStyle,x1,y1,x2,y2) {   
+ 
+  ctx.strokeStyle = fillStyle;
+  ctx.globalAlpha = 1.0;
+  ctx.beginPath();
+ ctx.moveTo(x1,y1);
+
+
+ctx.quadraticCurveTo(x1+x2/4,y2,x2,y1);
+      ctx.lineWidth = 0.5;
+ctx.stroke();
+
+}
+function drawOval(ctx, fillStyle,x,y,r,start,scalex,scaley) {
+ 
+  ctx.fillStyle = "rgba(200,200,200,0.3)";
+   ctx.scale(scalex,scaley);
+ 
+  ctx.fillStyle = fillStyle;
+  ctx.globalAlpha = 1.0;
+  ctx.beginPath();
+  
+ctx.arc(x,y,r,start,2*Math.PI);
+ctx.stroke();
+  ctx.fill();
+}
+function drawCircle(ctx, fillStyle,x,y,r,start) {
+ 
+    ctx.fillStyle = "rgba(200,200,200,0.3)";
+ 
+ 
+  ctx.fillStyle = fillStyle;
+  ctx.globalAlpha = 1.0;
+  ctx.beginPath();
+  
+ctx.arc(x,y,r,start,2*Math.PI);
+ctx.stroke();
+  ctx.fill();
+}
+</script>
+</body>
+</html>
