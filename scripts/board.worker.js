@@ -1,4 +1,3 @@
-
 var cartoon = {};
 
 importScripts("board.js");
