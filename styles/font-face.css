@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Revalia";
+    font-weight: normal;
+    font-style: normal;
+    src:url("fonts/Revalia/Revalia-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Press";
+    font-weight: normal;
+    font-style: normal;
+    src:url("fonts/PressStart2P/PressStart2P-Regular.ttf") format("truetype");
+}
